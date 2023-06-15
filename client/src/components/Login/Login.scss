@@ -1,0 +1,36 @@
+@use "../../stlyes/variables" as *;
+@use "../../stlyes/mixins" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  &__title {
+    padding-bottom: 1rem;
+  }
+
+  &__input {
+    margin-bottom: 0.5rem;
+  }
+
+  &__button {
+    width: 50%;
+    border-radius: 4px;
+    border-color: $lightningyellow;
+    background-color: white;
+  }
+}
+
+.signup-link {
+  text-align: center;
+}

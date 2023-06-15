@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Homepage from "./pages/Homepage/Homepage";
 import Form from "./components/Form/Form";
 import Signup from "./components/Signup/Signup";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/form" element={<Form />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </BrowserRouter>
