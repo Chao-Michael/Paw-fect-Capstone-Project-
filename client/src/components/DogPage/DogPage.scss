@@ -1,0 +1,19 @@
+@use "../../stlyes/mixins" as *;
+@use "../../stlyes/variables" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.dog-page {
+  padding: 1rem 0rem 0rem 1rem;
+
+  &__header {
+    padding-bottom: 1rem;
+  }
+}

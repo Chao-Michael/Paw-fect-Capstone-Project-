@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import Form from "./components/Form/Form";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
+import DogPage from "./components/DogPage/DogPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dogs" element={<DogPage />} />
         </Routes>
       </div>
     </BrowserRouter>
