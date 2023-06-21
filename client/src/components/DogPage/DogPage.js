@@ -5,7 +5,9 @@ const DogPage = ({ data }) => {
   return (
     <section className="dog-page">
       <h3 className="dog-page__header">The Paw-fect dog for you!</h3>
-      <DogCard image={data.image_link} name={data.name}></DogCard>
+      {data.map((dog, index) => (
+        <DogCard key={index} image={dog.image_link} name={dog.name} goodWithKids={dog.good_with_children} goodWithdogs={dog.good_with_other_dogs} />
+      ))}
     </section>
   );
 };

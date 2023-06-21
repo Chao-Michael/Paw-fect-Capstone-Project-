@@ -17,7 +17,7 @@ const Form = ({ setData }) => {
     event.preventDefault();
 
     const api_url =
-      `https://api.api-ninjas.com/v1/dogs?` + `shedding=${maintenance}` + `barking=${vocalness}&` + `energy=${energy}&` + `trainability${trainability}&` + `protectiveness=${protectiveness}&`;
+      `https://api.api-ninjas.com/v1/dogs?offset=2&` + `shedding=${maintenance}&` + `barking=${vocalness}&` + `energy=${energy}&` + `trainability${trainability}&` + `protectiveness=${protectiveness}`;
 
     const config = {
       headers: {
@@ -25,13 +25,17 @@ const Form = ({ setData }) => {
         "Content-Type": "application/json",
       },
     };
-
+    console.log(api_url);
     axios
       .get(api_url, config)
       .then(res => {
         console.log(res.data);
-        setData(res.data);
-        navigate("/dogs");
+        if (Array.isArray(res.data) && res.data.length === 0) {
+          alert("There is no dog matched for you. Please try makiing adjustments to the form!");
+        } else {
+          setData(res.data);
+          navigate("/dogs");
+        }
       })
       .catch(error => {
         console.error(error);
