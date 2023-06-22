@@ -9,7 +9,10 @@ const DogCard = ({ id, image, name, goodWithKids, goodWithdogs, playfulness }) =
           <h3 className="card-container__name">{name}</h3>
           <p className="card-container__info">Good with kids: {goodWithKids}</p>
           <p className="card-container__info">Good with other dogs: {goodWithdogs}</p>
-          <p className="card-container__info">playfulness: {playfulness}</p>
+          <div className="card-container__box">
+            <p className="card-container__info">playfulness: {playfulness}</p>
+            <button className="card-container__button"></button>
+          </div>
         </div>
       </div>
     </article>

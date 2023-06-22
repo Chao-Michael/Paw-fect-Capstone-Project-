@@ -11,7 +11,7 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding-bottom: 1rem;
 
   &__image {
     width: 100%;
@@ -20,5 +20,19 @@ body {
 
   &__name {
     text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    background-image: url(../../assets/icons/favorite.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border: none;
   }
 }
