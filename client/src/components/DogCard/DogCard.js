@@ -1,6 +1,6 @@
 import "./DogCard.scss";
 
-const DogCard = ({ id, image, name, goodWithKids, goodWithdogs }) => {
+const DogCard = ({ id, image, name, goodWithKids, goodWithdogs, playfulness }) => {
   return (
     <article className="card-container-box" key={id}>
       <div className="card-container">
@@ -9,6 +9,7 @@ const DogCard = ({ id, image, name, goodWithKids, goodWithdogs }) => {
           <h3 className="card-container__name">{name}</h3>
           <p className="card-container__info">Good with kids: {goodWithKids}</p>
           <p className="card-container__info">Good with other dogs: {goodWithdogs}</p>
+          <p className="card-container__info">playfulness: {playfulness}</p>
         </div>
       </div>
     </article>

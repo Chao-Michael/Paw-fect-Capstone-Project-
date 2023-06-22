@@ -25,7 +25,7 @@ const Form = ({ setData }) => {
         "Content-Type": "application/json",
       },
     };
-    console.log(api_url);
+
     axios
       .get(api_url, config)
       .then(res => {
