@@ -5,6 +5,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable("favourite_dogs", function (table) {
     table.increments("id");
+    table.string("image_url");
     table.string("dog_name").notNullable;
     table.integer("good_with_kids").notNullable;
     table.integer("good_with_other_dogs").notNullable;

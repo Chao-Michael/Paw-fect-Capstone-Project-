@@ -1,6 +1,23 @@
 import "./Favourites.scss";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Favourites = () => {
+  const [favourite, setFavourite] = useState("");
+
+  useEffect(() => {
+    try {
+      const fetchData = async () => {
+        const favList = await axios.get("http://localhost:8080/");
+        setFavourite(favList.data);
+      };
+    } catch (error) {
+      console.log("failed to get favourite dogs", error);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <article className="favourites-box">
       <div className="favourites">
