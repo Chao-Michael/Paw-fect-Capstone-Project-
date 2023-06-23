@@ -13,7 +13,21 @@ body {
 .dog-page {
   padding: 1rem 1rem 0rem 1rem;
 
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__header {
     padding-bottom: 1rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

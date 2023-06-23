@@ -1,4 +1,5 @@
 @use "../../stlyes/variables" as *;
+@use "../../stlyes//mixins" as *;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,15 +14,33 @@ body {
   flex-direction: column;
 }
 
-.favourites {
+.favourites-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 
   &__image {
     width: 100%;
     height: 10rem;
+
+    @include tablet {
+      width: 100%;
+      height: 25rem;
+    }
   }
 
   &__name {
     text-align: center;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__info {
+    @include tablet {
+      font-size: 1.5rem;
+    }
   }
 }

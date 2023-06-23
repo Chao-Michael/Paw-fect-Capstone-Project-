@@ -1,4 +1,5 @@
 @use "../../stlyes/variables" as *;
+@use "../../stlyes/mixins" as *;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +26,13 @@ body {
   &__box {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__info {
+    font-size: 1rem;
+    @include tablet {
+      padding-left: 1rem;
+    }
   }
 
   &__button {
