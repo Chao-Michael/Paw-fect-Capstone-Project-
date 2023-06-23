@@ -12,10 +12,12 @@ const Nav = () => {
       </div>
       <div className="nav__wrapper">
         <h3 className="nav__link">About us</h3>
-        <Link to={"/signup"} className="nav__link">
+        {/* <Link to={"/signup"} className="nav__link">
           <h3 className="nav__link">SignUp/Login</h3>
+        </Link> */}
+        <Link to={"/favourites"} className="nav__link">
+          <h3 className="nav__link">Favourites</h3>
         </Link>
-        <h3 className="nav__link">Favourites</h3>
       </div>
     </nav>
   );
