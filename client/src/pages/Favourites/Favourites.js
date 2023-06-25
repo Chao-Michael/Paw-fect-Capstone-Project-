@@ -20,7 +20,7 @@ const Favourites = () => {
 
   return (
     <article className="favourites">
-      <h2 className="favourites__header">It all comes down to these furry friends to be your paw-fect dog!</h2>
+      <h2 className="favourites__header">These furry friends are your paw-fect dogs!</h2>
       {favouriteList.map(dog => (
         <div className="favourites-box">
           <div className="favourites-container">

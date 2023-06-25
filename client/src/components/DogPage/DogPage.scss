@@ -29,5 +29,10 @@ body {
   &__box {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
 }

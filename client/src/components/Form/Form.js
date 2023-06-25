@@ -16,8 +16,17 @@ const Form = ({ setData }) => {
   const handleSubmit = event => {
     event.preventDefault();
 
+    if (energy === "1") {
+      setEnergy("3");
+    }
+
     const api_url =
-      `https://api.api-ninjas.com/v1/dogs?offset=2&` + `shedding=${maintenance}&` + `barking=${vocalness}&` + `energy=${energy}&` + `trainability${trainability}&` + `protectiveness=${protectiveness}`;
+      `https://api.api-ninjas.com/v1/dogs?offset=2&` +
+      `shedding=${maintenance}&` +
+      `barking=${vocalness}&` +
+      `energy=${energy}&` +
+      `trainability=${trainability}&` +
+      `protectiveness=${protectiveness}`;
 
     const config = {
       headers: {

@@ -14,11 +14,26 @@ body {
   flex-direction: column;
 }
 
+.favourites__header {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+}
+
 .favourites-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+
+  @include desktop {
+    gap: 1rem;
+    flex-direction: row;
+  }
 
   &__image {
     width: 100%;

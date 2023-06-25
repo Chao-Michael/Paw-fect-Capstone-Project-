@@ -1,4 +1,5 @@
 @use "../../stlyes/variables" as *;
+@use "../../stlyes/mixins" as *;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,12 +10,17 @@ body {
 }
 
 .nav {
-  background-color: black;
+  background-color: $navysky;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__link {
     color: $goldenrod;
@@ -22,5 +28,17 @@ body {
     font-size: 0.875rem;
     text-align: center;
     text-decoration: none;
+
+    @include tablet {
+      padding-right: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+    }
   }
 }

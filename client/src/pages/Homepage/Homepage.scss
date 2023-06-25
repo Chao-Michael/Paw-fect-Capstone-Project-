@@ -22,7 +22,7 @@ body {
 
     @include tablet {
       background-image: url(../../assets/images/hero-img.jpg);
-      height: 90.6vw;
+      height: 93.6vw;
     }
   }
 
@@ -37,6 +37,14 @@ body {
     text-align: center;
     padding-top: 10rem;
     padding-bottom: 1rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      font-size: 3rem;
+    }
   }
 
   &__button {
@@ -47,6 +55,18 @@ body {
     text-transform: uppercase;
     height: 2rem;
     width: 9rem;
+
+    @include tablet {
+      height: 3rem;
+      width: 11rem;
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      height: 5rem;
+      width: 20rem;
+      font-size: 2rem;
+    }
     &:hover,
     &:focus {
       box-shadow: inset 0 0 5rem 2em $lightningyellow;
