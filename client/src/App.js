@@ -8,6 +8,7 @@ import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
 import DogPage from "./components/DogPage/DogPage";
 import Favourites from "./pages/Favourites/Favourites";
+import About from "./pages/About/About";
 
 function App() {
   const [data, setData] = useState("");
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/dogs" element={<DogPage data={data} />} />
           <Route path="/favourites" element={<Favourites />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>

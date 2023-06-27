@@ -1,5 +1,6 @@
 @use "../../stlyes/mixins" as *;
 @use "../../stlyes/variables" as *;
+@use "../../stlyes/fonts" as *;
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,8 @@
 
 body {
   width: 100%;
+  font-family: ysabeau;
+  font-weight: 900;
 }
 
 .form-container {
@@ -54,6 +57,8 @@ body {
   }
 
   &__button {
+    font-family: ysabeau;
+    font-weight: 600;
     margin-top: 1rem;
     border-radius: 4px;
     border: none;

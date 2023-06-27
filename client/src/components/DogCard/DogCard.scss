@@ -12,10 +12,23 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px #f8c01f;
+    z-index: -1;
+  }
 
   &__image {
-    width: 100%;
+    width: 16rem;
     height: 10rem;
   }
 

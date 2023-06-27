@@ -8,6 +8,7 @@
 
 body {
   width: 100%;
+  font-family: ysabeau;
 }
 
 .hero {
@@ -53,6 +54,7 @@ body {
   }
 
   &__button {
+    font-family: ysabeau;
     color: $lightningyellow;
     background-color: transparent;
     border: 2px solid $lightningyellow;

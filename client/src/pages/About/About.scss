@@ -1,0 +1,16 @@
+@use "../../stlyes/variables" as *;
+@use "../../stlyes/mixins" as *;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    padding: 1rem;
+  }
+
+  &__text {
+    padding: 0.5rem;
+  }
+}
