@@ -22,6 +22,16 @@ body {
     justify-content: space-between;
   }
 
+  @include desktop {
+    padding: 2rem 3rem;
+  }
+
+  &__logo {
+    @include desktop {
+      width: 20rem;
+    }
+  }
+
   &__link {
     color: $goldenrod;
     font-weight: 400;
@@ -33,6 +43,10 @@ body {
       padding-right: 1rem;
       font-size: 1rem;
       font-weight: 500;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
     }
   }
 
