@@ -16,17 +16,8 @@ const Form = ({ setData }) => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    if (energy === "1") {
-      setEnergy("3");
-    }
-
     const api_url =
-      `https://api.api-ninjas.com/v1/dogs?offset=2&` +
-      `shedding=${maintenance}&` +
-      `barking=${vocalness}&` +
-      `energy=${energy}&` +
-      `trainability=${trainability}&` +
-      `protectiveness=${protectiveness}`;
+      `https://api.api-ninjas.com/v1/dogs?` + `shedding=${maintenance}&` + `barking=${vocalness}&` + `energy=${energy}&` + `trainability=${trainability}&` + `protectiveness=${protectiveness}`;
 
     const config = {
       headers: {
@@ -40,7 +31,7 @@ const Form = ({ setData }) => {
       .then(res => {
         console.log(res.data);
         if (Array.isArray(res.data) && res.data.length === 0) {
-          alert("There is no dog matched for you. Please try makiing adjustments to the form!");
+          alert("There is no dog matched for you or you have not yet filled out one of the five form fields. Please try making adjustments to the form!");
         } else {
           setData(res.data);
           navigate("/dogs");
@@ -116,6 +107,7 @@ const Form = ({ setData }) => {
         <div className="form-description">
           <p className="form-text">Here is a form with all the key things you should think about before getting the perfect furry friend!</p>
           <p className="form-text">Each input field has a scale of 1-5. With 1 being the least and 5 being the most</p>
+          <p className="form-text">At least one form field is required to be filled</p>
         </div>
       </div>
     </section>

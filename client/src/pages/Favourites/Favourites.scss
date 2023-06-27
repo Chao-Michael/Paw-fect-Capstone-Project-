@@ -29,6 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  margin: 3rem;
 
   @include desktop {
     gap: 1rem;
@@ -42,6 +43,10 @@ body {
     @include tablet {
       width: 100%;
       height: 25rem;
+    }
+
+    @include desktop {
+      padding-right: 2rem;
     }
   }
 

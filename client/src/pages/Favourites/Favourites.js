@@ -22,7 +22,7 @@ const Favourites = () => {
     <article className="favourites">
       <h2 className="favourites__header">These furry friends are your paw-fect dogs!</h2>
       {favouriteList.map(dog => (
-        <div className="favourites-box">
+        <div className="favourites-box" key={dog.index}>
           <div className="favourites-container">
             <img className="favourites-container__image" src={dog.image_url} alt="Photo of the dog" />
             <div className="favourites-container__textbox">
